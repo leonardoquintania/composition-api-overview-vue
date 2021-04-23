@@ -1,21 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Counter</h1>
+  <counter :initialValue="initialValue" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Counter from './components/Counter.vue';
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Counter,
+  },
+  data() {
+    return {
+      initialValue: 10,
+    };
+  },
+};
 </script>
 
 <style>
-#app {
+#app Counter {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
